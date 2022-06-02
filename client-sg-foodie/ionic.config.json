@@ -1,0 +1,7 @@
+{
+  "name": "client-sg-foodie",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
