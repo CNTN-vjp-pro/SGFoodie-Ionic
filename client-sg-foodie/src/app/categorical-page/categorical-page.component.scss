@@ -1,0 +1,131 @@
+img.banner {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.heading {
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.btnCategory {
+    width: 75px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px 5px;
+}
+
+.btnSelectedCategory {
+    color: white;
+    background-color: var(--main-color-red);
+    border: none;
+}
+
+.btnNotSelectedCategory {
+    color: #A7A9BF;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+}
+
+.restaurantRow {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    background-color: white;
+    width: 76%;
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.restaurantRow:hover {
+    filter: drop-shadow(1px 1px 4px rgba(0.5, 0.5, 0.5, 0.8));
+}
+
+.restaurantImage {
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.restaurantInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 14px;
+    width: 72%;
+}
+
+.restaurantName {
+    font-weight: bold;
+    font-size: 20.8px;
+    text-decoration: none;
+    color: black;
+}
+
+.restaurantName:hover {
+    color: var(--main-color-red);
+}
+
+.restaurantType,
+.restaurantLocation {
+    margin-top: 5px;
+}
+
+.restaurantShortDescription {
+    color: #9A9A9A;
+    font-style: italic;
+    margin: 0px;
+}
+
+.btnCTA {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 15px 5px 10px 0px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btnMenu {
+    border: 1px solid var(--main-color-content);
+    background-color: white;
+}
+
+.btnBookTable {
+    background-color: var(--main-color-red);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+}
+
+.container {
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width:1207px) {
+    img.banner {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .restaurantRow {
+        width: 90%;
+        flex-direction: column;
+    }
+    .container {
+        margin-bottom: 50px;
+    }
+    .heading {
+        margin: 20px 5px;
+    }
+}
