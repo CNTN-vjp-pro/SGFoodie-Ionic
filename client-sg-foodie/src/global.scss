@@ -9,18 +9,37 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import '~@fortawesome/fontawesome-free/css/fontawesome.min.css';
+:root {
+    --main-color-red: #D50805;
+    --main-color-yellow: #FFCF01;
+    --main-color-gray: #E0E0E0;
+    --main-color-footer: #E5E5E5;
+    --main-color-gray1-booking: rgb(192, 192, 192);
+    --main-color-gray2-booking: rgb(194, 194, 194);
+    --main-color-border: #C0C0C0;
+    --main-color-darkblue: #0E005A;
+    --main-color-placeholder: #8B8B8B;
+    --main-color-content: #676767;
+    --main-color-white-background: #F2F2F2;
+    --main-color-box-shadow: rgba(0, 0, 0, 0.25);
+}
