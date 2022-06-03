@@ -1,0 +1,39 @@
+<nav>
+    <div class="logo">
+        <a href="/home-page">
+            <img src="assets/images/SGFoodie_LOGO1.png" alt="Unable to load image ">
+        </a>
+    </div>
+    <label for="btn" class="icon-header">
+	<span class="fa fa-bars"></span></label>
+    <input type="checkbox" id="btn">
+    <ul>
+        <li>
+            <a href="/category/Nổi bật">Nổi bật</a>
+        </li>
+        <li>
+            <a href="/category/Ưu đãi">Ưu đãi</a>
+        </li>
+        <li class="foodList ">
+            <label for="btn-1" class="show">Văn hóa ẩm thực</label>
+            <a href="/category/Văn hóa ẩm thực">Văn hóa ẩm thực</a>
+            <input type="checkbox" id="btn-1">
+            <ul class="traditionalFoodList ">
+                <li><a href="/category/Kiểu Nhật">Kiểu Nhật</a></li>
+                <li><a href="/category/Kiểu Trung">Kiểu Trung</a></li>
+                <li><a href="/category/Kiểu Âu">Kiểu Âu</a></li>
+                <li><a href="/category/Kiểu Hàn">Kiểu Hàn</a></li>
+            </ul>
+        </li>
+        <li><a href="/category/Tinh hoa Việt Nam">Tinh hoa Việt Nam</a></li>
+        <li><a href="/category/Điểm nhấn quận mình">Điểm nhấn quận mình</a></li>
+        <li>
+            <button type="button" class="buttonLogin ">Đăng nhập</button>
+        </li>
+    </ul>
+</nav>
+<script>
+    $('.icon').click(function() {
+        $('span').toggleClass("cancel ");
+    });
+</script>
