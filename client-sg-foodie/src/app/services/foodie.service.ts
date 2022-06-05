@@ -1,10 +1,8 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IRestaurant } from 'interfaces/restaurants';
 import { Observable, throwError, retry, catchError } from 'rxjs';
-import { Booking } from '../models/booking';
-import { Policy } from '../models/policy';
-import { Restaurant } from '../models/restaurant';
+import { IRestaurant } from '../../../interfaces/restaurants';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,8 +13,8 @@ export class FoodieService {
     let API_URL = `${this.rest_API_URL}restaurants`;
     return this._http.get<IRestaurant[]>(API_URL)
     .pipe(
-      retry(3),
-      catchError(this.errorHandler)
+       retry(3),
+      catchError(this.errorHandler) 
     )
   }
 
@@ -32,3 +30,4 @@ export class FoodieService {
   }
 
 }
+
