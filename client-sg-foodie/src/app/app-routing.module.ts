@@ -8,12 +8,12 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+  {path:'category/:category',component:CategoricalPageComponent},
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },{path:'navigation-bar',component:NavigationBarComponent},	
-  {path:'category/:category',component:CategoricalPageComponent},
+  },{path:'navigation-bar',component:NavigationBarComponent},
 ];
 
 @NgModule({
@@ -23,3 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const RouterComponent = [NavigationBarComponent,CategoricalPageComponent]
