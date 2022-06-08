@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CategoricalPageComponent } from './categorical-page/categorical-page.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { RestaurantPageComponent } from './restaurant-page/restaurant-page.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },{path:'navigation-bar',component:NavigationBarComponent},	
   {path:'category/:category',component:CategoricalPageComponent},
+  {path: 'restaurant-page', component:RestaurantPageComponent},
 ];
 
 @NgModule({
