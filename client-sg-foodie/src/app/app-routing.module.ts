@@ -8,12 +8,17 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
-  {path:'category/:category',component:CategoricalPageComponent},
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },{path:'navigation-bar',component:NavigationBarComponent},
+  },
+  {path:'navigation-bar',
+  component:NavigationBarComponent},
+  {
+    path: 'category/:category',
+    loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        Nav Bar
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-img src="{{bannerSrc}}"></ion-img>
+    <ion-card *ngFor="let res of restaurants">
+        <ion-item>
+            <ion-img class="restaurantImage" src="{{res.image[0]}}" alt="Unable to load image"></ion-img>
+            <ion-label>
+                <h2>{{res.name}}</h2>
+                <h3>{{res.address[0].split(',')[2]}}</h3>
+                <p>{{res.short_description}}</p>
+                <ion-button class="btnCTA btnMenu" href="{{res.menu}}">Menu</ion-button>
+                <ion-button class="btnCTA btnBookTable">Đặt ngay</ion-button>
+            </ion-label>
+        </ion-item>
+        <!--  <ion-card>
+            <ion-img src="../../assets/images/Categorical/diemNhan.png"></ion-img>
+            <ion-card-header>
+                <ion-card-title>Tên nhà hàng</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+                Mô tả nhà hàng
+            </ion-card-content>
+        </ion-card> -->
+    </ion-card>
+</ion-content>
