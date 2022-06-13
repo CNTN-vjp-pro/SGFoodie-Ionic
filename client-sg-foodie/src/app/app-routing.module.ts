@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { CategoricalPageComponent } from './categorical-page/categorical-page.component';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-
 const routes: Routes = [
   {
     path: 'home',
@@ -13,8 +10,6 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  {path:'navigation-bar',
-  component:NavigationBarComponent},
   {
     path: 'category/:category',
     loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
@@ -28,4 +23,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RouterComponent = [NavigationBarComponent,CategoricalPageComponent]
