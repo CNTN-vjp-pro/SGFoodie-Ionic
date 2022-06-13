@@ -23,6 +23,7 @@ const routes: Routes = [
     loadChildren: () => import('./footer/footer.module').then( m => m.FooterPageModule)
   },
 
+
 ];
 
 @NgModule({
