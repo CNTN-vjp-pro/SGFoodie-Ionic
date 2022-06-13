@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CategoricalPageComponent } from './categorical-page.component';
+import { CategoryPage } from './category.page';
 
-describe('CategoricalPageComponent', () => {
-  let component: CategoricalPageComponent;
-  let fixture: ComponentFixture<CategoricalPageComponent>;
+describe('CategoryPage', () => {
+  let component: CategoryPage;
+  let fixture: ComponentFixture<CategoryPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CategoricalPageComponent ],
+      declarations: [ CategoryPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CategoricalPageComponent);
+    fixture = TestBed.createComponent(CategoryPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
