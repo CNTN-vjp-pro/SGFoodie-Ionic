@@ -1,3 +1,49 @@
 <ion-app>
-    <ion-router-outlet></ion-router-outlet>
+    <ion-menu contentId="content" side="end">
+        <ion-content>
+            <ion-menu-toggle>
+                <ion-item routerLink="/home">
+                    <ion-icon name="home" slot="start"></ion-icon>
+                    <ion-label>Trang chủ</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+                <ion-item routerLink="/category/Nổi bật">
+                    <ion-icon name="star" slot="start"></ion-icon>
+                    <ion-label>Nổi bật</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+                <ion-item routerLink="/category/Ưu đãi">
+                    <ion-icon name="flash" slot="start"></ion-icon>
+                    <ion-label>Ưu đãi</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+                <ion-item routerLink="/category/Văn hóa ẩm thực">
+                    <ion-icon name="earth" slot="start"></ion-icon>
+                    <ion-label>Văn hóa ẩm thực</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+                <ion-item routerLink="/category/Tinh hoa Việt Nam">
+                    <ion-icon name="heart-circle" slot="start"></ion-icon>
+                    <ion-label>Tinh hoa Việt Nam</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+                <ion-item routerLink="/category/Điểm nhấn quận mình">
+                    <ion-icon name="sunny" slot="start"></ion-icon>
+                    <ion-label>Điểm nhấn quận mình</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+                <ion-item routerLink="/booking">
+                    <ion-icon name="sunny" slot="start"></ion-icon>
+                    <ion-label>Booking</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+        </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="content" main></ion-router-outlet>
 </ion-app>

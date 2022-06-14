@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { IRestaurant } from '../../../interfaces/restaurants';
+import { Booking } from '../models/booking';
 
 @Injectable({
   providedIn: 'root'
@@ -24,9 +25,12 @@ export class FoodieService {
 
   getRestaurantsListByCategory(category:any){
 	return this._http.get<IRestaurant[]>(`${this.rest_API_URL}restaurants/${category}`);
-  }s
+  }
+  
   errorHandler(err: HttpErrorResponse) {
     return throwError(() => new Error(err.message))
   }
-
+  postBookingTable(data: Booking){
+	return this._http.post(`${this.rest_API_URL}bookingTable`,data);
+  }
 }
