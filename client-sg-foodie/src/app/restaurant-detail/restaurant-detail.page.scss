@@ -1,0 +1,42 @@
+html,
+body {
+    font-size: 13pt;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.restaurant-img {
+    width: 100%;
+}
+
+h5 {
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.btn-text {
+    color: white;
+    text-decoration: none;
+}
+
+ion-toolbar {
+    text-align: center;
+}
+
+ion-label {
+    white-space: normal !important;
+    text-align: justify;
+}
+
+ion-card-title a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.recommend-header {
+    margin: 0px 10px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}

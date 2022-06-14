@@ -14,13 +14,13 @@ export class FoodieService {
     let API_URL = `${this.rest_API_URL}restaurants`;
     return this._http.get<IRestaurant[]>(API_URL)
     .pipe(
-/*       retry(3),
-      catchError(this.errorHandler)   */
+      // retry(3),
+      // catchError(this.errorHandler)
     )
   }
 
   getResById(_id:any): Observable<IRestaurant[]>{
-    return this._http.get<IRestaurant[]>(`${this.rest_API_URL}${_id}`);
+    return this._http.get<IRestaurant[]>(`${this.rest_API_URL}restaurant/${_id}`);
   }
 
   getRestaurantsListByCategory(category:any){
@@ -34,4 +34,3 @@ export class FoodieService {
 	return this._http.post(`${this.rest_API_URL}bookingTable`,data);
   }
 }
-

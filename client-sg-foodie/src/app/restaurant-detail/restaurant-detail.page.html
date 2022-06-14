@@ -1,0 +1,111 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{restaurant.name}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <!-- Main -->
+    <ion-grid>
+        <ion-row>
+            <img src="{{restaurant.image[1]}}" alt="Restaurant-image" class="restaurant-img">
+        </ion-row>
+        <ion-row>
+            <ion-list>
+                <ion-list-header>
+                    <h5>Ẩm thực</h5>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>
+                        {{restaurant.category[1]}}
+                    </ion-label>
+                </ion-item>
+                <ion-list-header>
+                    <h5>Thực đơn</h5>
+                </ion-list-header>
+                <ion-item>
+                    <ion-button size="small" color="primary">
+                        <a href="{{restaurant.menu}}" class="btn-text">Menu</a>
+                    </ion-button>
+                </ion-item>
+                <ion-list-header>
+                    <h5>Giờ mở cửa</h5>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>
+                        {{restaurant.time}}
+                    </ion-label>
+                </ion-item>
+                <ion-list-header>
+                    <h5>Khoảng giá</h5>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>
+                        {{restaurant.price_range}}
+                    </ion-label>
+                </ion-item>
+                <ion-list-header>
+                    <h5>Chế độ ăn đặc biệt</h5>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>
+                        {{restaurant.special_diet}}
+                    </ion-label>
+                </ion-item>
+                <ion-list-header>
+                    <h5>Địa chỉ nhà hàng</h5>
+                </ion-list-header>
+                <ion-item *ngFor="let a of restaurant.address">
+                    <ion-label class="ion-text-wrap">
+                        {{a}}
+                    </ion-label>
+                </ion-item>
+                <ion-list-header>
+                    <h5>Giới thiệu</h5>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label class="ion-text-wrap">
+                        {{restaurant.description}}
+                    </ion-label>
+                </ion-item>
+                <ion-list-header>
+                    <h5>Món ăn được yêu thích</h5>
+                </ion-list-header>
+                <ion-item *ngFor="let d of restaurant.best_dishes">
+                    <ion-label>
+                        {{d}}
+                    </ion-label>
+                </ion-item>
+            </ion-list>
+            <ion-list-header>
+                <h5>Đánh giá</h5>
+            </ion-list-header>
+            <ion-item *ngFor="let fb of restaurant.cmt">
+                <ion-avatar slot="start">
+                    <img src="../../assets/images/userAvatar.png" />
+                </ion-avatar>
+                <ion-label class="ion-text-wrap">
+                    <h2>{{fb.user_id}}</h2>
+                    <h3>Đánh giá: {{fb.rate}} sao</h3>
+                    <p>{{fb.feedback}}</p>
+                </ion-label>
+            </ion-item>
+        </ion-row>
+        <ion-button href="/booking-page/{{restaurant._id}}" expand="full" color="danger">Đặt ngay</ion-button>
+    </ion-grid>
+    <!-- Recommend -->
+    <div class="recommend-header text-center">
+        <h5 style="line-height: 46px;">CÓ THỂ BẠN THÍCH</h5>
+    </div>
+    <ion-card *ngFor="let r of restaurants.slice(0, 5)">
+        <ion-card-header>
+            <img src="{{r.image[0]}}" alt="Restaurant-image" class="restaurant-img">
+            <ion-card-title>
+                <a href="/restaurant-detail/{{r._id}}">{{r.name}}</a>
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{r.short_description}}
+        </ion-card-content>
+    </ion-card>
+</ion-content>
