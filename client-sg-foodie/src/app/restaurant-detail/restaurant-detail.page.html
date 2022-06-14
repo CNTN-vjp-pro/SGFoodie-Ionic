@@ -25,7 +25,7 @@
                 </ion-list-header>
                 <ion-item>
                     <ion-button size="small" color="primary">
-                        <a href="{{restaurant.menu}}">Menu</a>
+                        <a href="{{restaurant.menu}}" class="btn-text">Menu</a>
                     </ion-button>
                 </ion-item>
                 <ion-list-header>
@@ -91,15 +91,18 @@
                 </ion-label>
             </ion-item>
         </ion-row>
+        <ion-button href="/booking-page/{{restaurant._id}}" expand="full" color="danger">Đặt ngay</ion-button>
     </ion-grid>
     <!-- Recommend -->
     <div class="recommend-header text-center">
-        <h5 style="line-height: 46px;">Có thể bạn thích</h5>
+        <h5 style="line-height: 46px;">CÓ THỂ BẠN THÍCH</h5>
     </div>
     <ion-card *ngFor="let r of restaurants.slice(0, 5)">
         <ion-card-header>
             <img src="{{r.image[0]}}" alt="Restaurant-image" class="restaurant-img">
-            <ion-card-title>{{r.name}}</ion-card-title>
+            <ion-card-title>
+                <a href="/restaurant-detail/{{r._id}}">{{r.name}}</a>
+            </ion-card-title>
         </ion-card-header>
         <ion-card-content>
             {{r.short_description}}
