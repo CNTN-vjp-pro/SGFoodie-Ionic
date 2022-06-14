@@ -15,7 +15,7 @@ const routes: Routes = [
     loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
   },
   {
-    path: 'booking',
+    path: 'booking-page/:id',
     loadChildren: () => import('./booking/booking.module').then( m => m.BookingPageModule)
   },
 
