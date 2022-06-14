@@ -1,0 +1,37 @@
+html,
+body {
+    font-size: 13pt;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.restaurant-img {
+    width: 100%;
+}
+
+h5 {
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ion-toolbar {
+    text-align: center;
+}
+
+ion-label {
+    white-space: normal !important;
+    text-align: justify;
+}
+
+.recommend-header {
+    background-color: rgb(226, 42, 42);
+    color: white;
+    height: 46px;
+}
