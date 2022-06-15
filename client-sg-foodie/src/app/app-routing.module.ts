@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { BookingPageModule } from './booking/booking.module';
 const routes: Routes = [
   {
     path: 'home',
