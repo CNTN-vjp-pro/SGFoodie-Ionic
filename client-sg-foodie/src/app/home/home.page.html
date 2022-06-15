@@ -8,8 +8,15 @@
 </ion-header>
 
 <ion-content fullscreen>
-    <!-- <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
+    <swiper class="mySwiper" [config]="config">
+        <ng-template swiperSlide *ngFor="let carousel of carousels">
+            <img [src]="carousel">
+        </ng-template>
+    </swiper>
+
+    <ion-searchbar>
+
+    </ion-searchbar>
 
     <div class="section" *ngFor="let cat of categories; let i = index">
         <div *ngIf="i<5">
