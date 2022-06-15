@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button slot="start" defaultHref="/" text=""></ion-back-button>
+        <ion-title class="ion-text-center">Quản lý tài khoản</ion-title>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-chip style="height: 45px; width: auto; border-radius: 20px; margin-top: 20px" routerLink="/user-profile">
+        <ion-avatar>
+            <img src="../../assets/images/userAvatar.png">
+        </ion-avatar>
+        <ion-label>
+            <h2>Nguyễn Thị Thùy Dương</h2>
+            <p style="font-size: 10pt;">Chỉnh sửa thông tin tại đây</p>
+        </ion-label>
+    </ion-chip>
+    <ion-card>
+        <img src="../../assets/images/GrillCheer/GrillCheer2.png" alt="">
+        <ion-card-header>
+            <ion-badge color="danger">Sắp tới</ion-badge>
+            <ion-card-title>Grill Cheer</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p>Thời gian: 16/06/2022 20:00</p>
+            <p>Số lượng: 5 người</p>
+        </ion-card-content>
+        <ion-button href="/booking-history" style="margin-left: 18px; margin-bottom: 10px;">Xem chi tiết</ion-button>
+    </ion-card>
+    <ion-card>
+        <img src="../../assets/images/Laang/Laang2.png" alt="">
+        <ion-card-header>
+            <ion-badge color="medium">Đã hoàn thành</ion-badge>
+            <ion-card-title>Laang</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p>Thời gian: 10/06/2022 11:00</p>
+            <p>Số lượng: 7 người</p>
+        </ion-card-content>
+        <ion-button routerLink="" style="margin-left: 18px; margin-bottom: 10px;">Xem chi tiết</ion-button>
+    </ion-card>
+</ion-content>
