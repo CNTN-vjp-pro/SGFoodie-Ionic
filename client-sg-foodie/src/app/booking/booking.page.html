@@ -9,3 +9,39 @@
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
+<ion-content>
+    <ion-item>
+        <ion-label position="stacked">Số người lớn</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Số trẻ em</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+    <ion-datetime width="100%" hour-cycle="h24" minuteValues="0,15,30,45" [min]="minTime">
+        <div slot="title">Thời gian đặt bàn</div>
+    </ion-datetime>
+    <ion-item>
+        <ion-label position="stacked">Họ và tên</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Số điện thoại</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Ghi chú</ion-label>
+        <ion-textarea></ion-textarea>
+    </ion-item>
+    <ion-item class="ion-text-justify"> Khách hàng đến nhà hàng vui lòng khai báo mã QR code, đo thân nhiệt và xịt khử khuẩn. Toàn bộ nhân viên được tiêm phòng vacxin đầy đủ, luôn đeo khẩu trang, và thường xuyên sát khuẩn trước và sau khi phục vụ khách hàng. Nhà hàng sẽ giữ bàn của khách
+        hàng trong tối đa 15 phút, nếu khách hàng thể đến được vui lòng thông báo trước cho nhà hàng qua điện thoại hoặc email.</ion-item>
+    <ion-item>
+        <ion-checkbox color="danger" slot="start"> </ion-checkbox>
+        <ion-label class="ion-text-wrap ion-text-justify">Tôi đã đọc và đồng ý với các điều khoản và điều kiện trên.</ion-label>
+    </ion-item>
+    <ion-button color="warning" type="submit" expand="block">Đặt bàn</ion-button>
+</ion-content>
