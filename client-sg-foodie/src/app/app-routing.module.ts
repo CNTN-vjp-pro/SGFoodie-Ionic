@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'booking-page/:id',
     loadChildren: () => import('./booking/booking.module').then( m => m.BookingPageModule)
+  },  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+
 
 ];
 
