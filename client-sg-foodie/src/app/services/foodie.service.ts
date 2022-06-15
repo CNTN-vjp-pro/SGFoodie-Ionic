@@ -2,7 +2,9 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { IRestaurant } from '../../../interfaces/restaurants';
+
 import { Booking } from '../models/booking';
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +12,7 @@ import { Booking } from '../models/booking';
 export class FoodieService {
   rest_API_URL = "http://localhost:3000/"
   constructor(private _http: HttpClient) { }
+  
   getRestaurantsList(): Observable<IRestaurant[]> {
     let API_URL = `${this.rest_API_URL}restaurants`;
     return this._http.get<IRestaurant[]>(API_URL)
