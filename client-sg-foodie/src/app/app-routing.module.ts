@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { BookingPageModule } from './booking/booking.module';
 const routes: Routes = [
   {
     path: 'home',
@@ -23,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./booking/booking.module').then( m => m.BookingPageModule)
   },
   {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
     path: 'user-profile',
     loadChildren: () => import('./user-profile/user-profile.module').then( m => m.UserProfilePageModule)
   },
@@ -34,7 +39,6 @@ const routes: Routes = [
     path: 'booking-history',
     loadChildren: () => import('./booking-history/booking-history.module').then( m => m.BookingHistoryPageModule)
   },
-
 
 ];
 
