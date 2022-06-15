@@ -14,8 +14,7 @@
         </ng-template>
     </swiper>
 
-    <ion-searchbar>
-
+    <ion-searchbar placeholder="Tên nhà hàng ..." [(ngModel)]="searchTerm" animated>
     </ion-searchbar>
 
     <div class="section" *ngFor="let cat of categories; let i = index">
@@ -30,7 +29,7 @@
             </div>
             <div class="section__container">
                 <div class="section__container-row" *ngIf="restaurants">
-                    <ion-card class="row__item" *ngFor="let res of findRestaurantList(cat).slice(0,4)" style="height:100%">
+                    <ion-card class="row__item" *ngFor="let res of findRestaurantList(cat).slice(0,4) | filter:searchTerm" style="height:100%">
                         <ion-card-content style="min-height: 250px;">
                             <div class="row__item-image ">
                                 <img src="{{res.image[0]}} " alt="Unable to load image " title="{{res.name}} ">
@@ -47,6 +46,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 </ion-content>
