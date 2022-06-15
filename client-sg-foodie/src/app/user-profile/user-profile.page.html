@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button slot="start" defaultHref="/" text=""></ion-back-button>
+        <ion-title class="ion-text-center">Thông tin tài khoản</ion-title>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item style="margin-bottom: 20px;">
+        <ion-avatar slot="start">
+            <img src="../../assets/images/userAvatar.png">
+        </ion-avatar>
+        <ion-label>User name</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Họ và tên</ion-label>
+        <ion-input required></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input required type="email"></ion-input>
+    </ion-item>
+    <ion-list>
+        <ion-radio-group value="Female">
+            <ion-item>
+                <ion-label position="stacked">Giới tính</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label style="font-size: 10pt;">Nữ</ion-label>
+                <ion-radio slot="start" value="Female"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label style="font-size: 10pt;">Nam</ion-label>
+                <ion-radio slot="start" value="Male"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+    </ion-list>
+    <ion-item>
+        <ion-label position="stacked">Số điện thoại</ion-label>
+        <ion-input type="tel" required></ion-input>
+    </ion-item>
+    <ion-button expand="full" style="margin: 25px 15px">CẬP NHẬT</ion-button>
+</ion-content>
