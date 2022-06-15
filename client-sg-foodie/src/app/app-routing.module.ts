@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'booking-history',
     loadChildren: () => import('./booking-history/booking-history.module').then( m => m.BookingHistoryPageModule)
+  },  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
+
 
 ];
 
