@@ -15,3 +15,4 @@ export class Booking{
 		this.note="";
 		this.restaurantName="";
 	}
+}
