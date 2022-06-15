@@ -17,21 +17,20 @@
                 <h2 style="font-weight: bold;">{{cat | uppercase}}</h2>
                 <div></div>
                 <span>
-                        <a href="category/{{cat}} " target="_blank ">Xem tất cả</a>
+                        <a href="category/{{cat}} " >Xem tất cả</a>
                         <i class="fas fa-angle-right"></i>
                     </span>
             </div>
-            <div></div>
             <div class="section__container">
                 <div class="section__container-row" *ngIf="restaurants">
                     <ion-card class="row__item" *ngFor="let res of findRestaurantList(cat).slice(0,4)" style="height:100%">
-                        <ion-card-content style="min-height: 330px;">
+                        <ion-card-content style="min-height: 250px;">
                             <div class="row__item-image ">
                                 <img src="{{res.image[0]}} " alt="Unable to load image " title="{{res.name}} ">
                             </div>
                             <div class="row__item-content ">
                                 <h3>
-                                    <a routerLink="/restaurant-detail/{{res._id}}" target="_blank ">{{res.name}}</a>
+                                    <a routerLink="/restaurant-detail/{{res._id}}">{{res.name}}</a>
                                 </h3>
                                 <p>{{res.short_description}}</p>
                                 <p *ngIf="cat=='Ưu đãi' " class="row__item--color " style="color:#d50805">{{res.discount}}</p>
