@@ -6,6 +6,10 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'restaurant-detail/:id',
+    loadChildren: () => import('./restaurant-detail/restaurant-detail.module').then( m => m.RestaurantDetailPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
@@ -14,6 +18,11 @@ const routes: Routes = [
     path: 'category/:category',
     loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
   },
+  {
+    path: 'booking-page/:id',
+    loadChildren: () => import('./booking/booking.module').then( m => m.BookingPageModule)
+  },
+
 ];
 
 @NgModule({
