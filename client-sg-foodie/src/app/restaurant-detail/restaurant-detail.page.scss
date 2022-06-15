@@ -16,9 +16,9 @@ h5 {
     margin-bottom: 0px;
 }
 
-.btn-text {
-    color: white;
-    text-decoration: none;
+ion-button {
+    --background: var(--main-color-red);
+    --background-activated: var(--main-color-red);
 }
 
 ion-toolbar {

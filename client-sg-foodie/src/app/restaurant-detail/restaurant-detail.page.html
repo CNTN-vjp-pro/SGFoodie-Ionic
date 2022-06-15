@@ -1,6 +1,10 @@
 <ion-header>
     <ion-toolbar>
+        <ion-back-button slot="start" defaultHref="/" text=""></ion-back-button>
         <ion-title>{{restaurant.name}}</ion-title>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
@@ -24,8 +28,7 @@
                     <h5>Thực đơn</h5>
                 </ion-list-header>
                 <ion-item>
-                    <ion-button size="small" color="primary">
-                        <a href="{{restaurant.menu}}" class="btn-text">Menu</a>
+                    <ion-button href="{{restaurant.menu}}" size="small">Menu
                     </ion-button>
                 </ion-item>
                 <ion-list-header>
@@ -91,7 +94,7 @@
                 </ion-label>
             </ion-item>
         </ion-row>
-        <ion-button href="/booking-page/{{restaurant._id}}" expand="full" color="danger">Đặt ngay</ion-button>
+        <ion-button href="/booking-page/{{restaurant._id}}" expand="full">Đặt ngay</ion-button>
     </ion-grid>
     <!-- Recommend -->
     <div class="recommend-header text-center">
