@@ -12,7 +12,7 @@ import { FoodieService } from '../services/foodie.service';
 export class BookingPage implements OnInit {
 	public bookingForm:any;
 	minTime: String = new Date().toISOString();
-	restaurant: any;  
+	public restaurant: any;  
 	errMsg: string = "";
 	_id: any;
 	booking:Booking= new Booking();
@@ -42,7 +42,9 @@ export class BookingPage implements OnInit {
   }
   bookingSubmit(){
 	this._service.postBookingTable(this.bookingForm.value).subscribe(res=>{
-   let resData=JSON.parse(JSON.stringify(res));
+    let resData=JSON.parse(JSON.stringify(res));
+    this.presentToast();
+	this.bookingForm.reset();
 })  
 }
 async presentToast() {
