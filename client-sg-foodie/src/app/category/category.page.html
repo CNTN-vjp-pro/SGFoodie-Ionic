@@ -11,7 +11,7 @@
 </ion-header>
 <ion-content fullscreen>
     <ion-img src="{{bannerSrc}}"></ion-img>
-    <ion-card *ngFor="let res of restaurants">
+    <ion-card *ngFor="let res of restaurants" style="cursor:pointer">
         <img style=" width:100%; " src="{{res.image[1]}} " alt="Unable to load image" routerLink="/restaurant-detail/{{res._id}}">
         <ion-card-header routerLink="/restaurant-detail/{{res._id}}">
             <ion-card-title>{{res.name}}</ion-card-title>
