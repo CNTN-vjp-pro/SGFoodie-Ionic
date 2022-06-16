@@ -47,7 +47,7 @@ export class BookingPage implements OnInit {
 	this.bookingForm.reset();
 })  
 }
-async presentToast() {
+   presentToast() {
     const toast = await this.toastController.create({
       message: 'Quý khách đã đặt bàn thành công!',
       duration: 1500
