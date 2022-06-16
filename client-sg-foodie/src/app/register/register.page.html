@@ -57,10 +57,11 @@
             </ion-item>
             <ion-note class="ion-padding" color="danger" *ngIf="regForm.errors?.['misMatch']">Mật khẩu không trùng khớp</ion-note>
             <ion-item>
-                <ion-checkbox color="danger" style="--background-checked:var(--main-color-red); --border-color-checked: var(--main-color-red);" (ionChange)="onChange($event)"></ion-checkbox>
-                <ion-label style="margin-left: 5pt;">Tôi đồng ý với Chính sách Bảo mật và Điều khoản & Điều kiện của SGFoodie</ion-label>
+
+                <ion-checkbox color="danger" style="--background-checked:var(--main-color-red); --border-color-checked: var(--main-color-red);"></ion-checkbox>
+                <ion-label style="margin-left: 5pt;" class="ion-text-wrap">Tôi đồng ý với Chính sách Bảo mật và Điều khoản & Điều kiện của SGFoodie</ion-label>
             </ion-item>
-            <ion-button type="submit" expand="block" style="--background:var(--main-color-red)">Đăng ký</ion-button>
+            <ion-button expand="block" class="btn-submit">Đăng ký</ion-button>
         </form>
     </div>
     <!-- <div>{{regForm.value | json}}</div> -->

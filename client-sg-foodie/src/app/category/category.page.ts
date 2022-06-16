@@ -33,15 +33,7 @@ export class CategoryPage implements OnInit {
 		  this.category = params.get('category');
 		  this.getBannerSource(this.category);
 		  this.getRestaurantsCategory(this.category);
-		 /*  if(this.categories.includes(this.category)==false){
-			  this.router.navigateByUrl('/**');
-		  }
-		  else{
-			this.getBannerSource(this.category);
-			this.getRestaurantsCategory(this.category);
-		  } */
 		});
-		
 	  }
 	  getRestaurantsCategory(category:any){
 		this._service.getRestaurantsListByCategory(category).subscribe((res:any) => {
@@ -51,6 +43,5 @@ export class CategoryPage implements OnInit {
 	  getBannerSource(category:any){
 		  this.bannerSrc=this.banner[category];
 	  }
-	 
-	}
+}
 	
