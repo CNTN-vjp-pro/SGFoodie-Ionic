@@ -26,13 +26,14 @@
                 <ion-input formControlName="phonenum" type="text" required [class.is-invalid]="phonenum.invalid && phonenum.touched"></ion-input>
             </ion-item>
             <div *ngIf="phonenum.invalid && phonenum.touched">
-                <ion-note class="ion-padding" color="danger" *ngIf="phonenum.errors?.['required']">Số điện thoại không hợp lệ</ion-note>
+                <ion-note class="ion-padding" color="danger" *ngIf="phonenum.errors?.['required']">Số điện thoại không được để trống</ion-note>
                 <ion-note class="ion-padding" color="danger" *ngIf="phonenum.errors?.['pattern']">Số điện thoại gồm 10 chữ số</ion-note>
             </div>
             <ion-item lines="full">
                 <ion-label position="floating">Mật khẩu</ion-label>
-                <ion-input type="password" formControlName="pass" required></ion-input>
+                <ion-input type="password" formControlName="pass" required [class.is-invalid]="regForm.controls['pass'].invalid && regForm.controls['pass'].touched"></ion-input>
             </ion-item>
+            <ion-note class="ion-padding" color="danger" *ngIf="regForm.controls['pass'].invalid && regForm.controls['pass'].touched">Mật khẩu không được để trống</ion-note>
             <div class="ion-text-right ion-padding">
                 <a href="#" class="text-color">Quên mật khẩu?</a>
             </div>
