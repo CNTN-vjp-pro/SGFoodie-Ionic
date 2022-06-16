@@ -2,3 +2,8 @@ ion-datetime {
     margin: auto;
     padding: auto;
 }
+
+ion-button {
+    --background: var(--main-color-yellow);
+    --background-activated: var(--main-color-yellow);
+}
