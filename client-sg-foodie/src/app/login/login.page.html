@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button slot="start" defaultHref="/" text=""></ion-back-button>
+        <ion-title class="ion-text-center">Đăng nhập</ion-title>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <img src="../../assets/images/SGFoodie_LOGO1.png" alt="Logo SG-foodie" class="logo-header">
+        <p class="text-center">SGFoodie sẽ cho bạn khám phá đến những ẩm thực ngon nhất của thành phố. Hãy bắt đầu nào!</p>
+        <ion-button fill="outline" expand="block">
+            <span><img src="../../assets/icon/google.svg" alt="GG-logo" class="logo-social"></span>
+            <span>Đăng nhập với Google</span>
+        </ion-button>
+        <ion-button fill="outline" expand="block" class="ion-margin-top">
+            <span><img src="../../assets/icon/facebook-icon.svg" alt="FB-logo" class="logo-social"></span>
+            <span>Đăng nhập với Facebook</span>
+        </ion-button>
+        <form [formGroup]="regForm">
+            <ion-item lines="full">
+                <ion-label position="floating">Số điện thoại</ion-label>
+                <ion-input formControlName="phonenum" type="text" required [class.is-invalid]="phonenum.invalid && phonenum.touched"></ion-input>
+            </ion-item>
+            <div *ngIf="phonenum.invalid && phonenum.touched">
+                <ion-note class="ion-padding" color="danger" *ngIf="phonenum.errors?.['required']">Số điện thoại không hợp lệ</ion-note>
+                <ion-note class="ion-padding" color="danger" *ngIf="phonenum.errors?.['pattern']">Số điện thoại gồm 10 chữ số</ion-note>
+            </div>
+            <ion-item lines="full">
+                <ion-label position="floating">Mật khẩu</ion-label>
+                <ion-input type="password" formControlName="pass" required></ion-input>
+            </ion-item>
+            <div class="ion-text-right ion-padding">
+                <a href="#" class="text-color">Quên mật khẩu?</a>
+            </div>
+            <ion-button expand="block" style="--background:var(--main-color-red)">Đăng nhập</ion-button>
+            <div class="text-center ion-padding-top">
+                Chưa có tài khoản? <a routerLink="/register" class="text-color">Đăng ký ngay</a>
+            </div>
+        </form>
+    </div>
+</ion-content>

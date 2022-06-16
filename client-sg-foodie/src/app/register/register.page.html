@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button slot="start" defaultHref="/" text=""></ion-back-button>
+        <ion-title class="ion-text-center">Đăng ký</ion-title>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <img src="../../assets/images/SGFoodie_LOGO1.png" alt="Logo SG-foodie" class="logo-header">
+        <p class="text-center">SGFoodie sẽ cho bạn khám phá đến những ẩm thực ngon nhất của thành phố. Hãy bắt đầu nào!</p>
+        <ion-button fill="outline" expand="block">
+            <span><img src="../../assets/icon/google.svg" alt="GG-logo" class="logo-social"></span>
+            <span>Đăng nhập với Google</span>
+        </ion-button>
+        <ion-button fill="outline" expand="block" class="ion-margin-top">
+            <span><img src="../../assets/icon/facebook-icon.svg" alt="FB-logo" class="logo-social"></span>
+            <span>Đăng nhập với Facebook</span>
+        </ion-button>
+        <form>
+            <ion-item lines="full">
+                <ion-label position="stacked">Họ và tên</ion-label>
+                <ion-input type="text" required placeholder="SG Foodie"></ion-input>
+            </ion-item>
+            <ion-item lines="full">
+                <ion-label position="stacked">Số điện thoại</ion-label>
+                <ion-input type="text" id="phonenum" placeholder="+84" required></ion-input>
+            </ion-item>
+            <ion-item lines="full">
+                <ion-label position="stacked">Ngày sinh</ion-label>
+                <ion-input type="date" required></ion-input>
+            </ion-item>
+            <ion-item lines="full">
+                <ion-label position="stacked">Email</ion-label>
+                <ion-input type="text" placeholder="example@gmail.com" required></ion-input>
+            </ion-item>
+            <ion-item lines="full">
+                <ion-label position="stacked">Mật khẩu</ion-label>
+                <ion-input type="password" required></ion-input>
+            </ion-item>
+            <ion-item lines="full">
+                <ion-label position="stacked">Nhập lại mật khẩu</ion-label>
+                <ion-input type="password" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <input type="checkbox" required style="margin-right: 5px;">
+                <span>Tôi đồng ý với Chính sách Bảo mật và Điều khoản & Điều kiện của SGFoodie​​</span>
+            </ion-item>
+            <ion-button expand="block" style="--background:var(--main-color-red)">Đăng ký</ion-button>
+        </form>
+    </div>
+</ion-content>

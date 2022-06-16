@@ -1,5 +1,10 @@
 <ion-app>
-    <ion-menu contentId="content" side="end">
+    <ion-menu contentId="content" side="end" class="ionic-margin-top">
+        <ion-header>
+            <ion-toolbar translucent>
+                <ion-title>SGFoodie</ion-title>
+            </ion-toolbar>
+        </ion-header>
         <ion-content>
             <ion-menu-toggle>
                 <ion-item routerLink="/home">
@@ -34,13 +39,19 @@
             <ion-menu-toggle>
                 <ion-item routerLink="/category/Điểm nhấn quận mình">
                     <ion-icon name="sunny" slot="start"></ion-icon>
-                    <ion-label>Điểm nhấn quận mình</ion-label>
+                    <ion-label class="ion-text-wrap">Điểm nhấn quận mình</ion-label>
                 </ion-item>
             </ion-menu-toggle>
             <ion-menu-toggle>
-                <ion-item routerLink="/booking">
-                    <ion-icon name="sunny" slot="start"></ion-icon>
-                    <ion-label>Booking</ion-label>
+                <ion-item routerLink="/user-account">
+                    <ion-icon name="person" slot="start"></ion-icon>
+                    <ion-label>Quản lý tài khoản</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+                <ion-item routerLink="/login">
+                    <ion-icon name="log-out" slot="start"></ion-icon>
+                    <ion-label>Đăng xuất</ion-label>
                 </ion-item>
             </ion-menu-toggle>
         </ion-content>
