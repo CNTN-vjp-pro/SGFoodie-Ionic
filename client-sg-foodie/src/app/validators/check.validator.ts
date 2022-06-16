@@ -21,12 +21,12 @@ export function customValidator(regex: RegExp): ValidatorFn{
 //   }
 
 export function passwordValidator(control: AbstractControl): {[key:string]: any} | null {
-   const pass = control.get('pass');
-   const confirmPass = control.get('confirmPass');
-if ((pass && pass.pristine)  || (confirmPass && confirmPass.pristine)){
+   const password = control.get('password');
+   const confirmPassword = control.get('confirmPassword');
+if ((password && password.pristine)  || (confirmPassword && confirmPassword.pristine)){
     return null;
 }
-   return pass && confirmPass && pass.value !== confirmPass.value ? {misMatch: true} : null
+   return password && confirmPassword && password.value !== confirmPassword.value ? {misMatch: true} : null
 }
 
 
