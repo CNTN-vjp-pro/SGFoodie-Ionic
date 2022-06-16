@@ -10,14 +10,14 @@ import { passwordValidator } from '../validators/check.validator';
 })
 export class LoginPage implements OnInit {
 
-  regForm: FormGroup;
+  public regForm: any;
 
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.regForm = this._formBuilder.group({
       phonenum: ['', [Validators.required, Validators.pattern("^((\\+84-?)|0)?[0-9]{10}$")]],
-      pass: [''],
+      pass: ['', [Validators.required]],
     }, {validators: [passwordValidator]})
   }
 
