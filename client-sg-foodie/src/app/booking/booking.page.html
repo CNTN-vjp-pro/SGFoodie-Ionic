@@ -9,3 +9,52 @@
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
+<ion-content>
+    <form [formGroup]="bookingForm" (ngSubmit)="bookingSubmit()" class="mt-3">
+        <ion-item>
+            <ion-label position="stacked">Số người lớn</ion-label>
+            <ion-input type="number" formControlName="adultQuantity" min="1" max="10"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Số trẻ em</ion-label>
+            <ion-input type="number" formControlName="childrenQuantity" min="0" max="10"></ion-input>
+        </ion-item>
+        <ion-datetime formControlName="bookingDate" hour-cycle="h24" minuteValues="0,15,30,45" [min]="minTime">
+            <div slot="title">Thời gian đặt bàn</div>
+        </ion-datetime>
+        <ion-item>
+            <ion-label position="stacked">Họ và tên</ion-label>
+            <ion-input formControlName="name" [class.is-invalid]="bookingForm.controls['name'].invalid && bookingForm.controls['name'].touched "></ion-input>
+            <div *ngIf="bookingForm.controls['name'].invalid && bookingForm.controls['name'].touched ">
+                <small class="text-danger" *ngIf="bookingForm.controls['name'].errors?.['required']">Họ và tên khách hàng không được để trống</small>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+            <div *ngIf="bookingForm.controls['email'].invalid && bookingForm.controls['email'].touched">
+                <small class="text-danger" *ngIf="bookingForm.controls['email'].errors?.['required']">Email khách hàng không được để trống</small>
+                <small class="text-danger" *ngIf="bookingForm.controls['email'].errors?.['email']">Vui lòng nhập email hợp lệ</small>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Số điện thoại</ion-label>
+            <ion-input formControlName="phoneNumber" placeholder="+84" [class.is-invalid]="bookingForm.controls['phoneNumber'].invalid &&bookingForm.controls['phoneNumber'].touched"></ion-input>
+            <div *ngIf="bookingForm.controls['phoneNumber'].invalid && bookingForm.controls['phoneNumber'].touched">
+                <small class="text-danger" *ngIf="bookingForm.controls['phoneNumber'].errors?.['required']">Số điện thoại khách hàng không được để trống</small>
+                <small class="text-danger" *ngIf="bookingForm.controls['phoneNumber'].errors?.['pattern']">Vui lòng nhập số điện thoại hợp lệ</small>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Ghi chú</ion-label>
+            <ion-textarea formControlName="note"></ion-textarea>
+        </ion-item>
+        <ion-item class="ion-text-justify"> Khách hàng đến nhà hàng vui lòng khai báo mã QR code, đo thân nhiệt và xịt khử khuẩn. Toàn bộ nhân viên được tiêm phòng vacxin đầy đủ, luôn đeo khẩu trang, và thường xuyên sát khuẩn trước và sau khi phục vụ khách hàng. Nhà hàng sẽ giữ bàn của
+            khách hàng trong tối đa 15 phút, nếu khách hàng thể đến được vui lòng thông báo trước cho nhà hàng qua điện thoại hoặc email.</ion-item>
+        <ion-item>
+            <ion-checkbox color="danger" slot="start"> </ion-checkbox>
+            <ion-label class="ion-text-wrap ion-text-justify">Tôi đã đọc và đồng ý với các điều khoản và điều kiện trên.</ion-label>
+        </ion-item>
+        <ion-button class="ion-margin" color="warning " type="submit " expand="block " (click)="presentToast()">Đặt bàn</ion-button>
+    </form>
+</ion-content>
