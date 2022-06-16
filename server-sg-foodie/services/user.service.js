@@ -34,7 +34,7 @@ async function getById(id) {
 async function create(userParam) {
     // validate
     if (await User.findOne({ phoneNumber: userParam.phoneNumber })) {
-        throw 'phoneNumber "' + userParam.phoneNumber + '" is already taken';
+        throw 'phoneNumber is already taken';
     }
 
     const user = new User(userParam);

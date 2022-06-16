@@ -20,7 +20,7 @@
             <span><img src="../../assets/icon/facebook-icon.svg" alt="FB-logo" class="logo-social"></span>
             <span>Đăng nhập với Facebook</span>
         </ion-button>
-        <form [formGroup]="regForm">
+        <form [formGroup]="regForm" (ngSubmit)="submitData(regForm.value)">
             <ion-item lines="full">
                 <ion-label position="stacked">Họ và tên</ion-label>
                 <ion-input type="text" required placeholder="SG Foodie" formControlName="fullName" [class.is-invalid]="fullName.invalid && fullName.touched"></ion-input>
@@ -40,7 +40,7 @@
             </div>
             <ion-item lines="full">
                 <ion-label position="stacked">Ngày sinh</ion-label>
-                <ion-input type="date"></ion-input>
+                <ion-input type="date" formControlName="dateBirth"></ion-input>
             </ion-item>
             <ion-item lines="full">
                 <ion-label position="stacked">Email</ion-label>
@@ -57,10 +57,11 @@
             </ion-item>
             <ion-note class="ion-padding" color="danger" *ngIf="regForm.errors?.['misMatch']">Mật khẩu không trùng khớp</ion-note>
             <ion-item>
-                <ion-checkbox color="danger" style="--background-checked:var(--main-color-red); --border-color-checked: var(--main-color-red);"></ion-checkbox>
+                <ion-checkbox color="danger" style="--background-checked:var(--main-color-red); --border-color-checked: var(--main-color-red);" (ionChange)="onChange($event)"></ion-checkbox>
                 <ion-label style="margin-left: 5pt;">Tôi đồng ý với Chính sách Bảo mật và Điều khoản & Điều kiện của SGFoodie</ion-label>
             </ion-item>
-            <ion-button expand="block" style="--background:var(--main-color-red)">Đăng ký</ion-button>
+            <ion-button type="submit" expand="block" style="--background:var(--main-color-red)">Đăng ký</ion-button>
         </form>
     </div>
+    <!-- <div>{{regForm.value | json}}</div> -->
 </ion-content>
