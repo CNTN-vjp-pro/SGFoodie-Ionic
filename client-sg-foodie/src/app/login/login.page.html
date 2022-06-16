@@ -23,15 +23,15 @@
         <form [formGroup]="regForm">
             <ion-item lines="full">
                 <ion-label position="floating">Số điện thoại</ion-label>
-                <ion-input type="text" id="phonenum" required [class.is-invalid]="phonenum.invalid && phonenum.touched"></ion-input>
-                <div *ngIf="phonenum.invalid && phonenum.touched">
-                    <small class="error ion-padding" *ngIf="phonenum.errors?.['required']">Phone number is invalid</small>
-                    <small class="error ion-padding" *ngIf="phonenum.errors?.['pattern']">Mobile phone must contain 10 digit</small>
-                </div>
+                <ion-input formControlName="phonenum" type="text" required [class.is-invalid]="phonenum.invalid && phonenum.touched"></ion-input>
             </ion-item>
+            <div *ngIf="phonenum.invalid && phonenum.touched">
+                <ion-note class="ion-padding" color="danger" *ngIf="phonenum.errors?.['required']">Số điện thoại không hợp lệ</ion-note>
+                <ion-note class="ion-padding" color="danger" *ngIf="phonenum.errors?.['pattern']">Số điện thoại gồm 10 chữ số</ion-note>
+            </div>
             <ion-item lines="full">
                 <ion-label position="floating">Mật khẩu</ion-label>
-                <ion-input type="password" required></ion-input>
+                <ion-input type="password" formControlName="pass" required></ion-input>
             </ion-item>
             <div class="ion-text-right ion-padding">
                 <a href="#" class="text-color">Quên mật khẩu?</a>
@@ -40,19 +40,6 @@
             <div class="text-center ion-padding-top">
                 Chưa có tài khoản? <a routerLink="/register" class="text-color">Đăng ký ngay</a>
             </div>
-            <!-- <ion-item lines="full">
-        <ion-label position="floating">DOB</ion-label>
-        <ion-datetime (ionChange)="getDate($event)" formControlName="dob" [value]="defaultDate"></ion-datetime>
-      </ion-item>
-      <ion-item lines="full">
-        <ion-label position="floating">Mobile</ion-label>
-        <ion-input formControlName="mobile" type="text" required></ion-input>
-      </ion-item>
-      <ion-row>
-        <ion-col>
-          <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
-        </ion-col>
-      </ion-row> -->
         </form>
     </div>
 </ion-content>
