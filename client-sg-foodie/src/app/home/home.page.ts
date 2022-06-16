@@ -52,7 +52,7 @@ export class HomePage implements OnInit{
   initilizeData(){
     return this._foodieService.getRestaurantsList().subscribe((data:any) => {
       this.restaurants = data;
-      console.log(this.restaurants)
+      // console.log(this.restaurants)
     })
   }
 
