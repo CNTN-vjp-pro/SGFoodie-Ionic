@@ -43,7 +43,6 @@ export class BookingPage implements OnInit {
   bookingSubmit(){
 	this._service.postBookingTable(this.bookingForm.value).subscribe(res=>{
    let resData=JSON.parse(JSON.stringify(res));
-   window.location.reload();
 })  
 }
 async presentToast() {
