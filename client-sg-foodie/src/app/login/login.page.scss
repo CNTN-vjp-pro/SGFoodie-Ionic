@@ -22,3 +22,9 @@ ion-button {
 ion-note {
     font-size: small;
 }
+
+.btn-submit {
+    --background: var(--main-color-red) !important;
+    --background-activated: var(--main-color-red) !important;
+    --background-hover: var(--main-color-red) !important;
+}
