@@ -13,7 +13,6 @@ export class RegisterPage implements OnInit {
 
   public regForm: FormGroup;
   users: any;
-  _error: any;
   constructor(
     private _formBuilder: FormBuilder,
     private _service: UserService,
@@ -45,8 +44,9 @@ export class RegisterPage implements OnInit {
     console.log('hello world:', this.regForm.value);
        
     if(data){
-      
-        this._service.register(data).subscribe({
+      // let _error;
+
+      this._service.register(data).subscribe({
           next: res=>{
             let resData=JSON.parse(JSON.stringify(res));
             console.log(resData.message);
@@ -55,13 +55,19 @@ export class RegisterPage implements OnInit {
             }
             
           },
-          error: err => this._error = err
-        });
-      } 
+          error: err => {
+            if(err.status===400){
+              this.presentToast('Số điện thoại đã được sử dụng');
+            }
+          }
+      });
+      // if(_error){
+      //   this.presentToast('Số điện thoại đã được sử dụng');
+      //   console.log(_error.status)
+      // }
+    } 
       
-      if(this._error){
-        this.presentToast('Số điện thoại đã được sử dụng');
-      }
+      
     
   }
 
